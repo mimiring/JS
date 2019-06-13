@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>예제1-1</title>
+    </head>
+    <body>
+        <script>
+            var s1 = prompt("숫자1을 입력해 주세요.");
+            var s2 = prompt("숫자2를 입력해 주세요.");
+            var n1 = Number(s1);
+            var n2 = Number(s2);
+            console.log(n1 + "+" + n2 + " = " + (n1 + n2));
+            console.log(n1 + "-" + n2 + " = " + (n1 - n2));
+            console.log(n1 + "*" + n2 + " = " + (n1 * n2));
+            console.log(n1 + "/" + n2 + " = " + (n1 / n2));
+
+            var height = prompt("키를 입력 해주세요");
+            var weight = prompt("몸무게를 입력해주세요");
+            var bmi = weight/((height/100)*(height/100));
+            console.log("BMI 지수는 " + bmi + "입니다");
+        
+            var F = prompt("화씨 온도를 입력 해주세요");
+            var C = (F+40)/1.8-40;
+            console.log("입력하신 화씨의 섭씨는 " + C + "입니다");
+
+            var char = prompt("길이를 구하고자하는 문자열을 입력 해주세요");
+            var len = char.length;
+            console.log("입력하신 " + char + "의 길이는 " + len + "입니다");
+        
+        </script>
+    </body>
+</html>
