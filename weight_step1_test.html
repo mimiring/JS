@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>적정 체중 구하기</title>
+    <script>
+        var height = Number(prompt("신장을 입력해주세요"));
+        var weight = Number(prompt("체중을 입력해주세요"));;
+        var normal = (height-100) * 0.9;
+        var difference = normal - weight;
+
+        document.write("신장 : ", height, "(cm)", "<br>");
+        document.write("체중 : ", weight, "(kg)", "<br>");
+        document.write("적정 체중 : ", "(",  height, "-100) * 0.9 = ", normal, "(kg)", "<br>");
+        document.write("결과 : ", "적정 체중은 ", normal, "kg 이며, 현재 적정 체중에서 ", difference, "kg 차이가 납니다.");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
