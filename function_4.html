@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>136p</title>
+    <script>
+        var rightID = "mimiring";
+        var rightPW = "0000";
+
+        function login(id, pw) {
+            if(id === rightID) {
+                if(pw === rightPW) {
+                document.write(id + "님을 환영합니다!!");
+                } else {
+                    alert("비밀번호 똑.바.로. 입력하세요");
+                }
+            } else {
+                alert("본인 아이디도 모르세요????");
+            }
+        }
+
+        var userID = prompt("아이디를 입력하세요.");
+        var userPW = prompt("비밀번호를 입력하세요.");
+
+        login(userID, userPW);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
