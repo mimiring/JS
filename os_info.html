@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>127p</title>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        var oslmg = null;
+
+        if(info.indexOf('windows')>=0) {
+            oslmg = "windows.png";
+        } else if(info.indexOf('macintosh')>=0) {
+            owlmg = "macintosh.png";
+        } else if(info.indexOf('iphone')>=0) {
+            owlmg = "iphone.png";
+        } else if(info.indexOf('android')>=0) {
+            owlmg = "android.png";
+        } 
+
+        document.write("<img src=\"images/" + oslmg + "\">", "<br>");
+        var scr = screen;
+        var sc_w = scr.width;
+        var sc_h = scr.height;
+
+        document.write("모니터 해상도 너비 : " + sc_w + "px", "<br>");
+        document.write("모니터 해상도 높이 : " + sc_h + "px", "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
