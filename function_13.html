@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>도전☆ Mission!</title>
+    <script>
+        function TestScore(name, kor, eng) {
+            this.userName = name;
+            this.korNum = kor;
+            this.engNum = eng;
+
+            TestScore.prototype.getTestInfo = function() {
+                document.write("이름 : " + this.userName, "<br>");
+                document.write("국어 : " + this.korNum, "<br>");
+                document.write("영어 : " + this.engNum, "<br>");
+            }
+            TestScore.prototype.getAvg = function() {
+                return(this.korNum + this.engNum) / 2;
+            }
+        }
+
+        var kim = new TestScore("김맨", 80, 90);
+        var oh = new TestScore("오맨", 100, 40);
+
+        kim.getTestInfo();
+        document.write("평균 : " + kim.getAvg(), "<br><br>");
+
+        oh.getTestInfo();
+        document.write("평균 : " + oh.getAvg(), "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
