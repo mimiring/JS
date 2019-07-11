@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>선택자</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            var arr1 = [{
+                "area" : "서울",
+                "name" : "미미링"
+            }, {
+                "area" : "부산",
+                "name" : "광안대교"
+            }, {
+                "area" : "대전",
+                "name" : "쭈루루"
+            }, {
+                "area" : "성남",
+                "name" : "밍두"
+            }]
+            
+            var arr2 = $.map(arr1, function(a, b) {
+                if(a.area === "서울") {
+                    return a;
+                }
+        });
+        console.log(arr2);
+        console.log("====first end====");
+
+        var arr3 = $.grep(arr1, function(a, b) {
+            if(a.area === "서울") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        console.log(arr3);
+        console.log("====second end====");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

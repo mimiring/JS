@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 선택자</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(function() {
+        $("#inner_1 p:contains(내용1)")
+        .css({
+            "background-color" : "lightblue"
+        });
+
+        $("#inner_1 p:has(strong)")
+        .css({
+            "border" : "2px solid #000"
+        });
+
+        $("#outer_wrap").contents()
+        .css({
+            "border" : "1px dashed lightblue"
+        });
+
+        $("#inner_2 p").not(":first")
+        .css({
+            "background-color" : "lightpink"
+        });
+
+        $("#inner_2 p").eq(2).end()
+        .css({
+            "color" : "coral"
+        });
+    })
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>contains(), contents(), has()</h2>
+            <p>
+                <span>내용1</span>
+            </p>
+            <p>
+                <strong>내용2</strong>
+            </p>
+            <p>
+                <span>내용3</span>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
