@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 등록 메서드</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(function() {
+        $(".btn1").on("click", function(e) {
+            e.preventDefault();
+            $(".txt1").css({ "background-color" : "lightblue" });
+        });
+
+        $(".btn2").on("click", function(e) {
+            $(".txt2").css({ "background-color" : "lightpink" });
+        });
+
+        $(".btn3").on("dblclick", function(){
+            $(".txt3").css({ "background-color" : "lightcoral" });
+        });
+    });
+    </script>
+</head>
+<body>
+   <p>
+       <a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a>
+   </p>
+   <p class="txt1">내용1</p>
+   <p>
+        <a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a>
+    </p>
+    <p class="txt2">내용2</p>
+    <p>
+        <button class="btn3">버튼3</button>
+    </p>
+    <p class="txt3">내용3</p>
+</body>
+</html>

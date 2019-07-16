@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 등록 메서드</title>
+    <script src="jquery.js"></script>
+    <script>
+    $(function() {
+        $(document).on("keydown", keyEventFnc);
+        function keyEventFnc(e) {
+        var direct = "";
+
+          switch(e.keyCode) {
+            case 37:
+                direct = "LEFT";
+                break;
+            case 38:
+                direct = "TOP";
+                break;
+            case 39:
+                direct = "RIGHT";
+                break;
+            case 40:
+                direct = "BOTTOM";
+                break;
+          }
+
+          if(direct)$("#user_id").val(direct);
+      }
+    });
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" name="user_id" id="user_id">
+    </p>
+</body>
+</html>
