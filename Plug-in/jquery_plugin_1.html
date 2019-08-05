@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>플러그인</title>
+     <script src="../jquery.js"></script>
+     <script src="js/jquery-ui.min.js"></script>
+     <style>
+     .layer_popup {
+         position: absolute;
+         left: 50px;
+         top: 50px;
+     }
+     .img {
+         width: 500px;
+     }
+     </style>
+     <script>
+     $(function() {
+         $(".layer_popup").draggable();
+     });
+     </script>
+ </head>
+ <body>
+     <div class="layer_popup">
+         <img src="css/images/pretty.png" alt="예쁜심" class="img">
+     </div>
+ </body>
+ </html>

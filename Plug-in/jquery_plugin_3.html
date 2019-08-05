@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>플러그인-bxslider</title>
+    <script src="../jquery.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script>
+    $(function() {
+        $('.slide_gallery').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true
+        });
+    });
+    </script>
+    <style>
+    .img {
+        width: 800px;
+    }
+    </style>
+</head>
+<body>
+    <div id="gallery_wrap">
+        <ul class="slide_gallery">
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+            <li><img src="css/images/pretty.png" class="img"></li>
+        </ul>
+    </div>
+</body>
+</html>
