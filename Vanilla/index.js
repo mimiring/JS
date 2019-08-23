@@ -1,10 +1,9 @@
 console.log("I'm JS. I'm working. I'm Beautiful. I'm work it!");
 
 const title = document.querySelector("#title");
-title.innerHTML = "Hi Javascript!!";
-title.style.color = "lightblue";
 
-document.title = "I own you now..";
+function handleResize() {
+    console.log("I have been resized");
+}
 
-
-console.dir(title);
+window.addEventListener("resize", handleResize);
