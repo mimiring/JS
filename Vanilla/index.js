@@ -2,16 +2,16 @@ const title = document.querySelector("#title");
 
 const CLICKED_CLASS = "clicked";
 
-let r = 0;
-let g = 0;
-let b = 0;
-
 function handleClick() {
-    title.style.color = `rgb(${r},${g},${b})`;
-    r += 10;
-    g += 10;
-    b += 10;
+    const currentClass = title.className;
+    if(currentClass !== CLICKED_CLASS) {
+        title.className = CLICKED_CLASS;
+    } else {
+        title.className = "";
+    }
 }
 
-
-title.addEventListener("click", handleClick);
+function init() {
+    title.addEventListener("click", handleClick);
+}
+init();
