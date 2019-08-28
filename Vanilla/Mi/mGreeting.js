@@ -19,7 +19,7 @@ function handleSubmit(event) {
 }
 
 function askForName() {
-    form.classList.remove(SHOWING_ON);
+    form.classList.add(SHOWING_ON);
     form.addEventListener("submit", handleSubmit);
     //submit하면 동작하는 함수 세팅
 }

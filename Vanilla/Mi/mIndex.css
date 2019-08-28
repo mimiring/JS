@@ -4,7 +4,21 @@ body {
 
 }
 
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
 .wrap {
     text-align: center;
     margin-top: 20%;
+}
+
+li {
+    list-style: none;
+    
 }
