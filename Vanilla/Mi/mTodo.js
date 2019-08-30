@@ -11,7 +11,7 @@ function delToDo(event) {
     const li = btn.parentNode; //btn의 부모
     toDoList.removeChild(li); //delBtn을 누른(evnet.target) 상위 li(btn의 부모)를 remove
     const cleanToDos = toDos.filter(function(toDo) {
-        return toDo.id !== parseInt(li.id);
+        return toDo.Number !== parseInt(li.id);
     });
     //toDOs라는 array에 저장되어 있는 값을 toDo라는 argument로 받아서 하나하나 실행
     //toDos에는 삭제되기 전 Number가 있으므로 삭제가 된 li 의 id와 다르다면 남아있는 값임
