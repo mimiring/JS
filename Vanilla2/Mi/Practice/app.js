@@ -5,6 +5,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange")
 const save = document.getElementById("jsSave");
 
+const INITIAL_COLOR = "#191914";
 const CANVAS_WIDTH = 400;
 const CANVAS_HEIGHT = 500;
 
@@ -14,6 +15,8 @@ canvas.lineWidth = 1;
 
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+ctx.fillstrokeStyle = INITIAL_COLOR;
+ctx.fillStyle = INITIAL_COLOR;
 
 let painting = false;
 let filling = false;
@@ -64,10 +67,10 @@ Array.from(colors).forEach(item => item.addEventListener("click", handleColorCli
 function handleModeClick(event) {
     if(filling === true) {
         filling = false;
-        mode.innerText = "Paint";
+        mode.innerText = "Fill";
     } else {
         filling = true;
-        mode.innerText = "Fill";
+        mode.innerText = "Paint";
     }
 }
 

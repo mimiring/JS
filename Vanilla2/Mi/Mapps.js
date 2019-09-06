@@ -18,8 +18,8 @@ canvas.height = CANVAS_HEIGHT;
 ctx.fillStyle = "white"; 
 ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 //지정해줘야 그림바탕이 투명하지 않음
-ctx.fillstrokeStyle = INITIAL_COLOR;
-ctx.fillStyle = INITIAL_COLOR;
+ctx.fillstrokeStyle = INITIAL_COLOR; //초기색상 지정
+ctx.fillStyle = INITIAL_COLOR; //초기색상 지정
 ctx.lineWidth = 1; //canvas에 그려지는 선 굵기 지정
 
 let painting = false;
