@@ -1,6 +1,6 @@
-const toDoForm = document.querySelector(".js-toDoForm"),
+const toDoForm = document.querySelector(".toDoForm"),
       toDoInput = toDoForm.querySelector("input"),
-      toDoList = document.querySelector(".js-toDoList");
+      toDoList = document.querySelector(".todo_list");
 
 const TODOS_LS = "할일 리스트";
 
@@ -27,7 +27,7 @@ function saveToDos() {
 function paintToDo(text) { //toDoInput의 value를 argument로 받아서 실행
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
-    delBtn.innerText = "X";
+    delBtn.innerText = "Remove Todo";
     delBtn.addEventListener("click", delToDo);
     //button click하면 동작하는 함수 세팅
 

@@ -8,26 +8,30 @@
     <title>Display</title>
 </head>
 <body>
-    <div class="wrap">
-        <div class="js-clock">
-            <h1>00:00</h1>
-        </div>
-        <form class="js-form form">
-            <input type="text" placeholder="What's your name?">
-        </form>
-        <p class="js-greetings greetings"></p>
-        <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do!">
-        </form>
-        <ul class="js-toDoList">
-        </ul>
-        <p class="js-weather">
-        </p>
-        <script src="mClock.js"></script>
-        <script src="mGreeting.js"></script>
-        <script src="mTodo.js"></script>
-        <script src="mBg.js"></script>
-        <script src="mWeather.js"></script>
+    <div class="dimmed"></div>
+    <div class="weather_wrap">
+        <p class="weather"></p>
+        <button class="updateBtn">Update</button>
     </div>
+    <div class="main">
+        <div class="js-clock">
+            <h1 class="time">00:00</h1>
+        </div>
+        <form class="js-form name_form">
+            <input type="text" class="input_name" placeholder="What's your name?">
+        </form>
+        <p class="greetings greetingMessage"></p>
+        <form class="toDoForm">
+            <input type="text" class="input_doing" placeholder="Write a to do!">
+        </form>
+        <div class="todo_wrap">
+            <ul class="todo_list list"></ul>
+        </div>
+    </div>
+    <script src="mClock.js"></script>
+    <script src="mGreeting.js"></script>
+    <script src="mTodo.js"></script>
+    <script src="mBg.js"></script>
+    <script src="mWeather.js"></script>
 </body>
 </html>

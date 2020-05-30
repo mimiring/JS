@@ -6,11 +6,8 @@ function handleImaLoad() {
 }
 
 function paintImage(imgNumber) {
-    const image = new Image();
-    image.src = `../images/${imgNumber + 1}.jpg`;
-    //random으로 받은 숫자의 범위는 0~4이므로 1을 더해서 1~5까지 나오게 설정
-    image.classList.add("bgImage");
-    body.appendChild(image);
+    // //random으로 받은 숫자의 범위는 0~4이므로 1을 더해서 1~5까지 나오게 설정
+    body.style.backgroundImage = `url(../images/${imgNumber + 1}.jpg)`;
 }
 
 function genRandom() {

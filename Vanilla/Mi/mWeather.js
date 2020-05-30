@@ -1,16 +1,11 @@
-const weather = document.querySelector(".js-weather");
-const updateBtn = document.querySelector(".임시");
+const weather = document.querySelector(".weather");
+const updateBtn = document.querySelector(".updateBtn");
 
-function update () {
-    console.log("hey");
-    updateBtn.addEventListener("click", refresh);
-    
-}
+
 function refresh () {
     console.log("hey");
     localStorage.removeItem("좌표");
 }
-
 
 const API_KEY = "b52951f1b68a6cb24ae38b8b4169db61";
 const COORDS = "좌표";
@@ -71,5 +66,6 @@ function loadCoords() {
 
 function init() {
     loadCoords();
+    updateBtn.addEventListener("click", refresh);
 }
 init();

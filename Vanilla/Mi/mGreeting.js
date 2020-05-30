@@ -1,9 +1,9 @@
 const form = document.querySelector(".js-form"),
       input = form.querySelector("input"),
-      greeting = document.querySelector(".js-greetings");
+      greeting = document.querySelector(".greetings");
 
-const USER_LS = "이름", //key명 설정
-      SHOWING_ON = "showing";
+const USER_LS = "이름"; //key명 설정
+const SHOWING_ON = "showing";
 
 function saveName(text) {
     localStorage.setItem(USER_LS, text); //USER_LS의 value를 세팅
@@ -34,7 +34,7 @@ function paintGreeting(text) {
 function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
     //localStorage에서 USER_LS의 정보를 가져옴
-    if(currentUser === null) {
+    if(currentUser === null) { // localStorage에 유저 이름이 없으면 이름을 물어봄.
         askForName();
     } else {
         paintGreeting(currentUser);
